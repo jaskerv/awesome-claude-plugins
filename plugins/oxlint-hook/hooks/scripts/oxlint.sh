@@ -33,6 +33,7 @@ if [ -n "$CWD" ]; then
 fi
 
 # Auto-fix fixable violations in place
+# || true: oxlint --fix exits non-zero when it finds violations (even ones it fixed), so we ignore the exit code here
 "$OXLINT" --fix "$FILE_PATH" >/dev/null 2>&1 || true
 
 # Run again to capture any remaining violations

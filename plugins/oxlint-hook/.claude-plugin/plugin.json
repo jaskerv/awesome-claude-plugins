@@ -5,7 +5,6 @@
   "author": {
     "name": "jaskerv"
   },
-  "source": "./plugins/oxlint-hook",
   "category": "development",
   "license": "MIT"
 }
