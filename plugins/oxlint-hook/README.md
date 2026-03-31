@@ -31,32 +31,10 @@ oxlint auto-discovers `.oxlintrc.json` by walking up from the edited file. No ex
 
 ## Installation
 
-1. Add this marketplace to `~/.claude/settings.json`:
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "jaskerv-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "jaskerv/awesome-claude-plugins"
-      }
-    }
-  }
-}
+```bash
+claude plugins marketplace add jaskerv/awesome-claude-plugins
+claude plugins install oxlint-hook@jaskerv-plugins
 ```
-
-2. Enable the plugin:
-
-```json
-{
-  "enabledPlugins": {
-    "oxlint-hook@jaskerv-plugins": true
-  }
-}
-```
-
-Restart Claude Code after editing `settings.json`.
 
 ## Verification
 
