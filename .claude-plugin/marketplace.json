@@ -1,0 +1,38 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "jaskerv",
+  "description": "A collection of Claude Code plugins by jaskerv",
+  "owner": {
+    "name": "jaskerv",
+    "email": "jono2496@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "vtsls-lsp",
+      "description": "TypeScript/JavaScript language server (VTSLS) for enhanced code intelligence in Claude Code",
+      "version": "1.0.0",
+      "author": {
+        "name": "jaskerv"
+      },
+      "source": "./plugins/vtsls-lsp",
+      "category": "development",
+      "strict": false,
+      "lspServers": {
+        "vtsls": {
+          "command": "vtsls",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".ts": "typescript",
+            ".tsx": "typescriptreact",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mts": "typescript",
+            ".cts": "typescript",
+            ".mjs": "javascript",
+            ".cjs": "javascript"
+          }
+        }
+      }
+    }
+  ]
+}

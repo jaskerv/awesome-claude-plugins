@@ -1,0 +1,11 @@
+# Environment / secrets
+.envrc
+.env
+.env.local
+.env.*.local
+
+# mise local config
+.mise.local.toml
+
+# Claude Code local settings
+.claude/settings.json
