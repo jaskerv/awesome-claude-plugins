@@ -33,6 +33,17 @@
           }
         }
       }
+    },
+    {
+      "name": "oxlint-hook",
+      "description": "Runs oxlint after every file edit — auto-fixes violations and reports remaining issues to Claude",
+      "version": "1.0.0",
+      "author": {
+        "name": "jaskerv"
+      },
+      "source": "./plugins/oxlint-hook",
+      "category": "development",
+      "strict": false
     }
   ]
 }

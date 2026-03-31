@@ -7,6 +7,7 @@ A curated collection of Claude Code plugins by [@jaskerv](https://github.com/jas
 | Plugin | Description | Category |
 |--------|-------------|----------|
 | [vtsls-lsp](./plugins/vtsls-lsp/) | TypeScript/JavaScript language server powered by VS Code's TypeScript engine | LSP |
+| [oxlint-hook](./plugins/oxlint-hook/) | Runs oxlint after every file edit — auto-fixes violations and reports remaining issues to Claude | Hook |
 
 ## Installation
 
@@ -52,6 +53,14 @@ Gives Claude Code's built-in `LSP` tool access to go-to-definition, find referen
 **Why VTSLS over `typescript-language-server`?** VTSLS uses VS Code's TypeScript extension under the hood. It handles complex projects — monorepos, path aliases, project references — more reliably than the alternative.
 
 [Full installation instructions →](./plugins/vtsls-lsp/README.md)
+
+### oxlint-hook
+
+Auto-lints JS/TS files as Claude edits them. After each write, it runs `oxlint --fix` to clean up fixable violations in place, then reports anything left to Claude as a system message so Claude can address it in the next turn.
+
+Works with your project's existing `.oxlintrc.json` — no extra config needed in the plugin. Prefers the local `node_modules/.bin/oxlint` binary so it always uses the version your project specifies.
+
+[Full installation instructions →](./plugins/oxlint-hook/README.md)
 
 ## Contributing
 
