@@ -1,6 +1,6 @@
 {
   "name": "oxlint-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Runs oxlint after every file edit — auto-fixes violations and reports remaining issues to Claude",
   "author": {
     "name": "jaskerv"
