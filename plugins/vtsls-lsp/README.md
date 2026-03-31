@@ -31,55 +31,16 @@ vtsls --version
 
 ## Installation
 
-1. Add this repo as a marketplace source in your Claude Code `~/.claude/settings.json`:
-
-```json
-"extraKnownMarketplaces": {
-  "jaskerv-plugins": {
-    "source": {
-      "source": "github",
-      "repo": "jaskerv/awesome-claude-plugins"
-    }
-  }
-}
+```bash
+claude plugins marketplace add jaskerv/awesome-claude-plugins
+claude plugins install vtsls-lsp@jaskerv-plugins
 ```
 
-2. Enable the plugin:
+If you have the official `typescript-lsp` plugin enabled, disable it — having two servers registered for the same file extensions causes undefined behaviour:
 
-```json
-"enabledPlugins": {
-  "vtsls-lsp@jaskerv-plugins": true
-}
+```bash
+claude plugins disable typescript-lsp@claude-plugins-official
 ```
-
-> The format is `<plugin-name>@<marketplace-key>`, where `jaskerv` is the key you defined in `extraKnownMarketplaces` above.
-
-3. If you have the official `typescript-lsp` plugin enabled, disable it — having two servers registered for the same file extensions causes undefined behaviour:
-
-```json
-"typescript-lsp@claude-plugins-official": false
-```
-
-### Complete example
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "vtsls-lsp": {
-      "source": {
-        "source": "github",
-        "repo": "jaskerv/awesome-claude-plugins"
-      }
-    }
-  },
-  "enabledPlugins": {
-    "vtsls-lsp@jaskerv-plugins": true,
-    "typescript-lsp@claude-plugins-official": false
-  }
-}
-```
-
-Restart Claude Code after editing `settings.json` for the changes to take effect.
 
 ## Verification
 
