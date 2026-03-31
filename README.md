@@ -11,35 +11,9 @@ A curated collection of Claude Code plugins by [@jaskerv](https://github.com/jas
 
 ## Installation
 
-Add this marketplace to your Claude Code `~/.claude/settings.json`:
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "jaskerv-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "jaskerv/awesome-claude-plugins"
-      }
-    }
-  }
-}
-```
-
-Then install any plugin via CLI:
-
 ```bash
-claude plugins install vtsls-lsp@jaskerv-plugins
-```
-
-Or enable via settings:
-
-```json
-{
-  "enabledPlugins": {
-    "vtsls-lsp@jaskerv-plugins": true
-  }
-}
+claude plugins marketplace add jaskerv/awesome-claude-plugins
+claude plugins install <plugin-name>@jaskerv-plugins
 ```
 
 ## Plugins in Detail
