@@ -35,7 +35,7 @@ vtsls --version
 
 ```json
 "extraKnownMarketplaces": {
-  "jaskerv": {
+  "jaskerv-plugins": {
     "source": {
       "source": "github",
       "repo": "jaskerv/awesome-claude-plugins"
@@ -48,7 +48,7 @@ vtsls --version
 
 ```json
 "enabledPlugins": {
-  "vtsls-lsp@jaskerv": true
+  "vtsls-lsp@jaskerv-plugins": true
 }
 ```
 
@@ -73,7 +73,7 @@ vtsls --version
     }
   },
   "enabledPlugins": {
-    "vtsls-lsp@jaskerv": true,
+    "vtsls-lsp@jaskerv-plugins": true,
     "typescript-lsp@claude-plugins-official": false
   }
 }

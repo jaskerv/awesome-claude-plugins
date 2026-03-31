@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "jaskerv",
+  "name": "jaskerv-plugins",
   "description": "A collection of Claude Code plugins by jaskerv",
   "owner": {
     "name": "jaskerv",

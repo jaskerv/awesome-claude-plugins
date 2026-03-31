@@ -15,7 +15,7 @@ Add this marketplace to your Claude Code `~/.claude/settings.json`:
 ```json
 {
   "extraKnownMarketplaces": {
-    "jaskerv": {
+    "jaskerv-plugins": {
       "source": {
         "source": "github",
         "repo": "jaskerv/awesome-claude-plugins"
@@ -28,7 +28,7 @@ Add this marketplace to your Claude Code `~/.claude/settings.json`:
 Then install any plugin via CLI:
 
 ```bash
-claude plugins install vtsls-lsp@jaskerv
+claude plugins install vtsls-lsp@jaskerv-plugins
 ```
 
 Or enable via settings:
@@ -36,7 +36,7 @@ Or enable via settings:
 ```json
 {
   "enabledPlugins": {
-    "vtsls-lsp@jaskerv": true
+    "vtsls-lsp@jaskerv-plugins": true
   }
 }
 ```
