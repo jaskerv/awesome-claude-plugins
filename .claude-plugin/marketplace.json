@@ -35,6 +35,17 @@
       }
     },
     {
+      "name": "secret-scan-hook",
+      "description": "Runs gitleaks after every file edit — detects leaked secrets and alerts Claude before they reach git",
+      "version": "1.0.0",
+      "author": {
+        "name": "jaskerv"
+      },
+      "source": "./plugins/secret-scan-hook",
+      "category": "security",
+      "strict": false
+    },
+    {
       "name": "oxlint-hook",
       "description": "Runs oxlint after every file edit — auto-fixes violations and reports remaining issues to Claude",
       "version": "1.0.1",

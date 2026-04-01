@@ -1,0 +1,10 @@
+{
+  "name": "secret-scan-hook",
+  "version": "1.0.0",
+  "description": "Runs gitleaks after every file edit — detects leaked secrets and alerts Claude before they reach git",
+  "author": {
+    "name": "jaskerv"
+  },
+  "category": "security",
+  "license": "MIT"
+}

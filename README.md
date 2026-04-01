@@ -7,6 +7,7 @@ A curated collection of Claude Code plugins by [@jaskerv](https://github.com/jas
 | Plugin | Description | Category |
 |--------|-------------|----------|
 | [vtsls-lsp](./plugins/vtsls-lsp/) | TypeScript/JavaScript language server powered by VS Code's TypeScript engine | LSP |
+| [secret-scan-hook](./plugins/secret-scan-hook/) | Runs gitleaks after every file edit — detects leaked secrets and alerts Claude before they reach git | Hook |
 | [oxlint-hook](./plugins/oxlint-hook/) | Runs oxlint after every file edit — auto-fixes violations and reports remaining issues to Claude | Hook |
 
 ## Installation
@@ -35,6 +36,14 @@ Auto-lints JS/TS files as Claude edits them. After each write, it runs `oxlint -
 Works with your project's existing `.oxlintrc.json` — no extra config needed in the plugin. Prefers the local `node_modules/.bin/oxlint` binary so it always uses the version your project specifies.
 
 [Full installation instructions →](./plugins/oxlint-hook/README.md)
+
+### secret-scan-hook
+
+Protects against leaked secrets in two layers. The async per-file scan warns Claude immediately after each write so secrets get caught early. The blocking commit gate intercepts `git commit` commands and hard-blocks any commit where staged files contain secrets — using [gitleaks](https://github.com/gitleaks/gitleaks) with 140+ detectors covering AWS, GitHub, Stripe, GCP, and more.
+
+Respects `.gitleaks.toml` at the project root for custom rules and allowlists.
+
+[Full installation instructions →](./plugins/secret-scan-hook/README.md)
 
 ## Contributing
 
