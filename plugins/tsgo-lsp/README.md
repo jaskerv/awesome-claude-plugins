@@ -39,6 +39,7 @@ If you have the official `typescript-lsp` plugin (or `vtsls-lsp`) enabled, disab
 
 ```bash
 claude plugins disable typescript-lsp@claude-plugins-official
+claude plugins disable vtsls-lsp@jaskerv-plugins
 ```
 
 ## Verification
