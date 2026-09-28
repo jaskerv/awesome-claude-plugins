@@ -35,6 +35,33 @@
       }
     },
     {
+      "name": "tsgo-lsp",
+      "description": "TypeScript/JavaScript language server (tsgo) for enhanced code intelligence in Claude Code",
+      "version": "1.0.0",
+      "author": {
+        "name": "jaskerv"
+      },
+      "source": "./plugins/tsgo-lsp",
+      "category": "development",
+      "strict": false,
+      "lspServers": {
+        "tsgo": {
+          "command": "tsgo",
+          "args": ["--lsp", "--stdio"],
+          "extensionToLanguage": {
+            ".ts": "typescript",
+            ".tsx": "typescriptreact",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mts": "typescript",
+            ".cts": "typescript",
+            ".mjs": "javascript",
+            ".cjs": "javascript"
+          }
+        }
+      }
+    },
+    {
       "name": "secret-scan-hook",
       "description": "Runs gitleaks after every file edit — detects leaked secrets and alerts Claude before they reach git",
       "version": "1.0.0",

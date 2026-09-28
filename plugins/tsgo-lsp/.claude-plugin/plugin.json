@@ -1,0 +1,10 @@
+{
+  "name": "tsgo-lsp",
+  "version": "1.0.0",
+  "description": "TypeScript/JavaScript language server powered by tsgo (TypeScript 7's native Go compiler) for enhanced code intelligence in Claude Code",
+  "author": {
+    "name": "jaskerv"
+  },
+  "category": "development",
+  "license": "MIT"
+}
