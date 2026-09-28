@@ -7,6 +7,7 @@ A curated collection of Claude Code plugins by [@jaskerv](https://github.com/jas
 | Plugin | Description | Category |
 |--------|-------------|----------|
 | [vtsls-lsp](./plugins/vtsls-lsp/) | TypeScript/JavaScript language server powered by VS Code's TypeScript engine | LSP |
+| [tsgo-lsp](./plugins/tsgo-lsp/) | TypeScript/JavaScript language server powered by tsgo, TypeScript 7's native Go compiler | LSP |
 | [secret-scan-hook](./plugins/secret-scan-hook/) | Runs gitleaks after every file edit — detects leaked secrets and alerts Claude before they reach git | Hook |
 | [oxlint-hook](./plugins/oxlint-hook/) | Runs oxlint after every file edit — auto-fixes violations and reports remaining issues to Claude | Hook |
 
@@ -28,6 +29,16 @@ Gives Claude Code's built-in `LSP` tool access to go-to-definition, find referen
 **Why VTSLS over `typescript-language-server`?** VTSLS uses VS Code's TypeScript extension under the hood. It handles complex projects — monorepos, path aliases, project references — more reliably than the alternative.
 
 [Full installation instructions →](./plugins/vtsls-lsp/README.md)
+
+### tsgo-lsp
+
+TypeScript and JavaScript language intelligence for Claude Code, powered by [tsgo](https://github.com/microsoft/typescript-go) — TypeScript 7's native Go-based compiler and language server.
+
+Gives Claude Code's built-in `LSP` tool access to go-to-definition, find references, hover types, document symbols, workspace symbol search, and go-to-implementation — for `.ts`, `.tsx`, `.js`, `.jsx`, and ESM/CJS variants.
+
+**Why tsgo?** It's the official native successor to the JS-based TypeScript compiler, built for speed. Still early — some LSP features available in mature servers like VTSLS may be missing.
+
+[Full installation instructions →](./plugins/tsgo-lsp/README.md)
 
 ### oxlint-hook
 
